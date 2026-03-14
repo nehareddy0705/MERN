@@ -1,0 +1,104 @@
+### read all users
+GET http://localhost:4000/user-api/users
+
+
+### create new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username" : "neha",
+    "password" : "neha0705",
+    "email" : "neha@gmail.com",
+    "age" : 18
+}
+
+### update the data
+PUT http://localhost:4000/user-api/users/69aa645ec4517ecad9ac055f
+Content-Type: application/json
+
+{
+    "username" : "neha reddy",
+    "password" : "neha0705",
+    "email" : "neha@gmail.com",
+    "age" : 18
+}
+
+### delete a user by id
+DELETE http://localhost:4000/user-api/users/69aa8a517aca086c32fbe00c
+
+###
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username" : "Ravi",
+    "password" : "Ravi",
+    "email" : "Ravi@gmail.com",
+    "age" : 19
+}
+
+
+### 
+post http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productId" : 1001,
+    "productName" : "Laptop",
+    "price" : 40000,
+    "brand" : "DELL"
+    
+}
+
+
+###
+GET http://localhost:4000/product-api/products
+
+
+###
+GET http://localhost:4000/product-api/products/1001
+
+
+###
+PUT http://localhost:4000/product-api/products/1001
+Content-Type: application/json
+
+{
+    "productId" : 1001,
+    "productName" : "Laptop",
+    "price" : 50000,
+    "brand" : "HP"
+}
+
+###
+POST  http://localhost:4000/product-api/products/
+Content-Type: application/json
+
+{
+    "productId" : 1002,
+    "productName" : "Mobile",
+    "price" : 30000,
+    "brand" : "OnePlus"
+}
+
+
+###
+DELETE http://localhost:4000/product-api/products/1001
+
+
+### user login
+post http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "email" : "neha@gmail.com",
+    "password" : "neha0705"
+}
+
+
+### read all user (req to protected route)
+GET http://localhost:4000/user-api/user
+
+### add product to the cart
+PUT http://localhost:4000/user-api/cart/product-id/69b24934a915f03cb66188b9
