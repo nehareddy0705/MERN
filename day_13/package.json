@@ -1,0 +1,24 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nehareddy0705/MERN.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nehareddy0705/MERN/issues"
+  },
+  "homepage": "https://github.com/nehareddy0705/MERN#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.2.2"
+  }
+}
