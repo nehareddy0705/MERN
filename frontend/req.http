@@ -1,0 +1,29 @@
+POST http://localhost:4000/emp-api/employee
+Content-Type: application/json
+
+{
+    "name" : "Neha",
+    "email" : "neha@gmail.com",
+    "mobile" : 1234567890,
+    "designation" : "Manager",
+    "companyName" : "Google"
+}
+
+###
+GET http://localhost:4000/emp-api/employee
+
+###
+PUT http://localhost:4000/emp-api/employee/69ca3978109845ef436de5fb
+Content-Type: application/json
+
+{
+    "name" : "neha reddy",
+    "email" : "neha@gmail.com",
+    "mobile" : 1234567890,
+    "designation" : "Manager",
+    "companyName" : "Google"
+}
+
+
+###
+DELETE  http://localhost:4000/emp-api/employee/69ca3978109845ef436de5fb
