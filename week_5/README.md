@@ -11,5 +11,5 @@ This directory contains tasks and assignments for Week 5, organized chronologica
 1. Transition from basic vanilla CSS to more advanced layout management techniques.
 2. Understand the utility-first methodology by working hands-on with Tailwind CSS.
 3. Learn how to set up and configure a Tailwind project environment.
-4. Practice building modular and visually appealing UI components that can be integrated into larger applications.
+4. Practice building modular and visually appealing UI components that can be integrated into larger applications
 
