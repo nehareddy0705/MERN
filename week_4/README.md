@@ -13,5 +13,3 @@ This directory contains assignments for Week 4, shifting the focus towards front
 3. Grasp the basics of CSS selectors, properties, and values to alter the appearance of HTML elements.
 4. Practice linking external stylesheets to an HTML document for better code organization.
 
-## How to View
-Since these are static files, no server or runtime environment is required. Simply double-click any `.html` file to open and view it in your default web browser. You can inspect the elements using browser developer tools to understand how the styles are applied.
