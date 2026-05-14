@@ -12,5 +12,5 @@ This directory contains backend assignments and projects for Week 3. The primary
 1. Understand how to design and implement RESTful API endpoints.
 2. Learn how to connect a Node.js server to a NoSQL database (MongoDB).
 3. Gain practical experience with user registration and login flows.
-4. Implement token-based authentication to secure sensitive endpoints.
+4. Implement token-based authentication to secure sensitive endpoints
 
