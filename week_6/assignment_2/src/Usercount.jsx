@@ -16,4 +16,4 @@ function Usercount({ count }) {
   );
 }
 
-export default Usercount;
+export default Usercount
