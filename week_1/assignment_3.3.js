@@ -14,21 +14,12 @@ const students = [
 ];
 
 // Tasks:
-//     1. filter() students who passed (marks ≥ 40)
-//     2. map() to add a grade field
-//               ≥90 → A
-//               ≥75 → B
-//               ≥60 → C
-//               else → D
+//    1. filter() students who passed (marks >= 40)
+let passedStudents = students.filter(obj => obj.marks >= 40)
+console.log("Passed students:", passedStudents)
 
-//    3. reduce() to calculate average marks
-//    4. find() the student who scored 92
-//    5. findIndex() of student "Kiran"
-
-let r1 = students.filter(obj => obj.marks >= 40)
-console.log(r1)
-
-let r2 = students.map(obj => {
+//    2. map() to add a grade field
+let studentsWithGrades = students.map(obj => {
   let grade;
   if(obj.marks >= 90){
     grade = 'A'
@@ -44,13 +35,16 @@ let r2 = students.map(obj => {
   }
   return {...obj,grade}
 })
-console.log(r2)
+console.log("Students with grades:", studentsWithGrades)
 
-let r3 = students.reduce((acc,obj) => acc + obj.marks,0)/students.length
-console.log(r3)
+//    3. reduce() to calculate average marks
+let averageMarks = students.reduce((acc,obj) => acc + obj.marks, 0) / students.length
+console.log("Average marks:", averageMarks)
 
-let r4 = students.find(obj => obj.marks == 92)
-console.log(r4)
+//    4. find() the student who scored 92
+let topScorer = students.find(obj => obj.marks === 92)
+console.log("Student who scored 92:", topScorer)
 
-let r5 = students.findIndex(obj => obj.name = 'Kiran')
-console.log(r5)
+//    5. findIndex() of student "Kiran"
+let kiranIndex = students.findIndex(obj => obj.name === 'Kiran')
+console.log("Index of Kiran:", kiranIndex)

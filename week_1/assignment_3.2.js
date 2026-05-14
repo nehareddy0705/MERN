@@ -11,23 +11,22 @@ const cart = [
 ];
 
 // Tasks:
-//     1. Use filter() to get only inStock products
-//     2. Use map() to create a new array with:  { name, totalPrice }
-//     3. Use reduce() to calculate grand total cart value
-//     4. Use find() to get details of "Mouse"
-//     5. Use findIndex() to find the position of "Keyboard"
+// 1. Use filter() to get only inStock products
+let inStockItems = cart.filter(obj => obj.inStock)
+console.log("In-stock items:", inStockItems)
 
-let r1 = cart.filter(obj => obj.inStock)
-console.log(r1)
+// 2. Use map() to create a new array with:  { name, totalPrice }
+let cartSummaries = cart.map(obj => ({name : obj.name, totalPrice : obj.price * obj.quantity}))
+console.log("Cart summaries:", cartSummaries)
 
-let r2 = cart.map(obj => ({name : obj.name, totalPrice : obj.price * obj.quantity}))
-console.log(r2)
+// 3. Use reduce() to calculate grand total cart value
+let totalCartValue = cart.reduce((acc,obj) => acc + obj.price * obj.quantity, 0)
+console.log("Total cart value:", totalCartValue)
 
-let r3 = cart.reduce((acc,obj) => acc + obj.price * obj.quantity,0)
-console.log(r3)
+// 4. Use find() to get details of "Mouse"
+let mouseDetails = cart.find(obj => obj.name === 'Mouse')
+console.log("Mouse details:", mouseDetails)
 
-let r4 = cart.find(obj => obj.name == 'Mouse')
-console.log(r4)
-
-let r5 = cart.findIndex(obj => obj.name = 'keyboard')
-console.log(r5)
+// 5. Use findIndex() to find the position of "Keyboard"
+let keyboardIndex = cart.findIndex(obj => obj.name === 'Keyboard')
+console.log("Keyboard index:", keyboardIndex)

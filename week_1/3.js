@@ -1,63 +1,51 @@
-//advanced operations on array
+// Advanced operations on arrays
+// These methods generally do not modify the original array; instead, they return a new array (except sort).
 
-//It doesnt modify original array instead it make a copy of array.
+const dataValues = [90, 45, -12, 65, 73];
 
-// let data = [90,45,-12,65,73]
+// 1. filter - Selecting elements based on a condition
+let midRangeValues = dataValues.filter((element) => element > 40 && element < 80);
+console.log("Values between 40 and 80:", midRangeValues);
 
-// syntax - let result = data.filter/map((element,index => condition)) - 2nd parameter optional
-//filter - selecting the element
-// let r1 = data.filter((element) => element > 40 && element < 80)
-// console.log(r1)
-// //map - modifying the element
-// let r2 = data.map(element => element + 10)
-// console.log(r2)
+// 2. map - Transforming elements
+let increasedValues = dataValues.map(element => element + 10);
+console.log("Values increased by 10:", increasedValues);
 
-// // add 10 for element < 50 and subtract 20 for element > 50.
-// const r3 = data.map(element => 
-// {
-//     if (element < 50){
-//         return element + 10
-//     }
-//     else{
-//         return element - 20
-//     }
-// }
-// )
-// console.log(r3)
+// Add 10 for elements < 50, and subtract 20 for elements >= 50.
+const adjustedValues = dataValues.map(element => {
+    if (element < 50) {
+        return element + 10;
+    } else {
+        return element - 20;
+    }
+});
+console.log("Adjusted values:", adjustedValues);
 
-// //reduce - returns single value
-// //syntax - let result = data.data.reduce((accumulator,element))
-// const sum = data.reduce((accum,element) => accum + element)
-// console.log(sum)
+// 3. reduce - Accumulating a single result from the array
+const totalSum = dataValues.reduce((accumulator, element) => accumulator + element, 0);
+console.log("Sum of all values:", totalSum);
 
-// //find min
-// const min = data.reduce((accum,element) =>{
-//     if (accum < element){
-//         return accum
-//     }
-//     else{
-//         return element
-//     }
-// } )
-// console.log(min)
+// Find minimum value
+const minValue = dataValues.reduce((min, element) => {
+    return (min < element) ? min : element;
+});
+console.log("Minimum value:", minValue);
 
-// const max = data.reduce((accum,element) =>{
-//     if (accum > element){
-//         return accum
-//     }
-//     else{
-//         return element
-//     }
-// } )
-// console.log(max)
+// Find maximum value
+const maxValue = dataValues.reduce((max, element) => {
+    return (max > element) ? max : element;
+});
+console.log("Maximum value:", maxValue);
 
-// //sort - modifies the original array
-// let array = [9,10,8,4]
-// array.sort((a,b) => a-b)
-// console.log(array)
+// 4. sort - Modifies the original array
+let arrayToSort = [9, 10, 8, 4];
+arrayToSort.sort((a, b) => a - b);
+console.log("Sorted array (in-place):", arrayToSort);
 
-// //tosorted - makes the copy of the sorted array
-// let test = array.toSorted((a,b) => a - b)
-// console.log(test)
-
-
+// 5. toSorted - Returns a new sorted array without modifying the original
+// Note: toSorted is a modern JavaScript feature
+if (arrayToSort.toSorted) {
+    let originalArray = [9, 10, 8, 4];
+    let newlySortedArray = originalArray.toSorted((a, b) => a - b);
+    console.log("Newly sorted copy:", newlySortedArray);
+}

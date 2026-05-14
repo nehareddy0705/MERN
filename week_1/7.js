@@ -1,62 +1,65 @@
-// //Aysnchronous
+// Asynchronous JavaScript
 
-// console.log("first")
-// setTimeout(() => {
-//     console.log("task completed")
-// },1)
-// console.log("second")
-// console.log("third")
+console.log("--- Sync vs Async Execution ---");
+console.log("First statement");
 
+setTimeout(() => {
+    console.log("Asynchronous task completed (executed after Call Stack is empty)");
+}, 1);
 
-// //timer function
+console.log("Second statement");
+console.log("Third statement");
 
-//setTimeout
-// setTimeout(() =>{
-//     console.log("callback executed")
-// },3000)
+// Timer Functions
+// setTimeout: Executes callback once after the specified delay
+setTimeout(() => {
+    console.log("setTimeout callback executed after 3 seconds");
+}, 3000);
 
-//setInterval
-// setInterval(() => {
-//     console.log("call")
-// },3000)
+// setInterval: Executes callback repeatedly at specified intervals
+const intervalId = setInterval(() => {
+    console.log("setInterval called (repeatedly)");
+}, 3000);
 
+// Clear the interval after 10 seconds to avoid infinite logging
+setTimeout(() => clearInterval(intervalId), 10000);
 
-// //promise - can be fulfilled or rejected - only one can happen - Asynchronous
-    //Examples
-        //make API request
-        //hash a password
-        //creating tokens
-        //database/HTTP libraries 
-        //file & stream APIs
-// //call in 5 secs
-// console.log("Friend is waiting for a call in 5 sec.")
-// let futureCondition = false
-// const promObj = new Promise((fulfillStage, rejectedStage) => { //parameters are functions
-//    if(futureCondition){
-//         fulfillStage("promise fulfilled")
-//     }
-//     else{
-//         rejectedStage("promise rejected")
-//     }
-// },5000)
-// promObj
-//     .then((message) => {console.log("message in then:",message)})
-//     .catch((errormessage) => {console.log("error is :",errormessage)})
+// Promises
+// A Promise represents the eventual completion (or failure) of an asynchronous operation.
+// Examples: API requests, database queries, file reads.
 
-// //I'll send 10,000/- tomorrow
-console.log("I will send 10,000/- tomorrow...")
-let futureCondition = true
-const promobj = new Promise((fulfilled,rejected) => {
-    if(futureCondition){
-        fulfilled("10000 sent")
-    }
-    else{
-        rejected("can't send money")
-    }
-},10000)
-promobj 
-    .then((mess) => {console.log(mess)})
-    .catch((error) => {console.log(error)})
+console.log("--- Promise Example 1 ---");
+console.log("Friend is waiting for a call in 5 seconds...");
+let willCall = false; // Toggle to true to fulfill
 
+const callPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (willCall) {
+            resolve("Friend called successfully!");
+        } else {
+            reject("Friend forgot to call.");
+        }
+    }, 5000);
+});
 
+callPromise
+    .then((message) => { console.log("Promise Fulfilled:", message); })
+    .catch((errorMessage) => { console.log("Promise Rejected:", errorMessage); });
 
+console.log("--- Promise Example 2 ---");
+console.log("I will send 10,000/- tomorrow (in 10 seconds)...");
+let willSendMoney = true;
+
+const moneyPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if (willSendMoney) {
+            resolve("10,000/- transferred successfully.");
+        } else {
+            reject("Transaction failed. Can't send money.");
+        }
+    }, 10000);
+});
+
+moneyPromise
+    .then((successMessage) => { console.log("Money Promise:", successMessage); })
+    .catch((error) => { console.log("Money Promise Error:", error); });

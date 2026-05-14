@@ -1,61 +1,61 @@
-// spread operator (create copies of objects and arrays)
-    // create copies top level objects
-    //add elements/properties while copying
-    //merge
-// make shallow copy 
-// doesnt copy nested objects
+// 1. Spread Operator (...)
+// Used to create shallow copies of objects and arrays, merge them, or add properties.
+// Note: It creates a "shallow copy" - it doesn't deeply copy nested objects.
 
-// for objects
-// let person1 = {
-//     name:'neha',
-//     address: {
-//         city : 'hyd'
-//     }
-// }
-// let copy = {...person1}
-// copy.name = 'ravi'
-// copy.address.city = 'nyc'
-// console.log(person1)
-// console.log(copy)
+const personOriginal = {
+    name: 'Neha',
+    address: {
+        city: 'Hyderabad'
+    }
+};
+
+const shallowCopy = { ...personOriginal };
+shallowCopy.name = 'Ravi';
+shallowCopy.address.city = 'NYC'; // This modifies the original object too, because of shallow copying!
+
+console.log("Original Person (Affected by shallow copy):", personOriginal);
+console.log("Shallow Copy Person:", shallowCopy);
+
+// 2. Deep Copy
+// Copies all nested objects so they are completely independent.
+const personForDeepCopy = {
+    name: 'Neha',
+    address: {
+        city: 'Hyderabad'
+    }
+};
+
+const deepCopiedPerson = structuredClone(personForDeepCopy);
+deepCopiedPerson.name = 'Ravi';
+deepCopiedPerson.address.city = 'NYC';
+
+console.log("Original Person (Safe from deep copy):", personForDeepCopy);
+console.log("Deep Copied Person:", deepCopiedPerson);
 
 
-// //deep copy - copies all the objects
-// let person2 = {
-//     name:'neha',
-//     address: {
-//         city : 'hyd'
-//     }
-// }
-// let copyPerson = structuredClone(person2)
-// copyPerson.name = 'ravi'
-// copyPerson.address.city = 'nyc'
-// console.log(person2)
-// console.log(copyPerson)
-
-
-//rest parameter - take multiple arguments
-// cant give any parameter after rest parameter
-// function sum(...a){
-//     let ans = 0
-//     for(let num of a){
-//         ans += num
-//     }
-//     return ans
-// }
-// console.log(sum(10,30,40,50))
-
-//destructuring(unpacking)
-let arr = [12,20,30]
-let [a,b,c] = arr
-console.log(a,b,c)
-
-let emp = {
-    eid : 101,
-    company : 'CTS'
+// 3. Rest Parameter (...)
+// Gathers multiple arguments into a single array. Must be the last parameter.
+function calculateSum(...numbers) {
+    let total = 0;
+    for (let num of numbers) {
+        total += num;
+    }
+    return total;
 }
-let {eid,company} = emp //name should be same as keys in the object
-console.log(eid)
+console.log("Sum of multiple arguments:", calculateSum(10, 30, 40, 50));
 
+// 4. Destructuring (Unpacking)
+// Unpacking Array values
+const scoresArray = [12, 20, 30];
+const [score1, score2, score3] = scoresArray;
+console.log("Destructured Array Values:", score1, score2, score3);
 
+// Unpacking Object values
+const employeeRecord = {
+    empId: 101,
+    company: 'CTS'
+};
 
-
+// Variable names must match the object keys
+const { empId, company } = employeeRecord; 
+console.log("Destructured Object Value (empId):", empId);
