@@ -14,9 +14,3 @@ This directory contains intermediate to advanced JavaScript concepts and assignm
 3. Learn the basics of asynchronous execution to avoid blocking the main thread.
 4. Take the first steps toward building a backend architecture.
 
-## How to Run
-Navigate into the relevant directory and use Node.js to execute the script files:
-```bash
-node <filename>.js
-```
-For backend projects, check the specific subdirectory for additional instructions.
