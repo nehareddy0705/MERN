@@ -14,10 +14,3 @@ By completing these assignments, the goal was to:
 3. Learn how to iterate over collections of data effectively using modern ES6 array methods.
 4. Build a foundation for more advanced JavaScript concepts in the upcoming weeks.
 
-## How to Run
-To run any of the JavaScript files in this folder, make sure you have [Node.js](https://nodejs.org/) installed on your machine. You can execute a file directly from your terminal using the following command:
-```bash
-node <filename>.js
-```
-
-These scripts serve as practice for core JavaScript fundamentals.
