@@ -1,15 +1,19 @@
-# Week 4 - Introduction to HTML and CSS
+# Week 4 - HTML & CSS Basics
 
-This directory contains assignments for Week 4, shifting the focus towards frontend web development basics using standard HTML5 and CSS3.
+Introductory HTML and CSS assignments from Week 4.
 
-## Overview of Assignments
-- **`assignment_1.html`:** Demonstrates fundamental HTML structural elements. It focuses heavily on list structures, including both nested unordered (bulleted) and ordered (numbered) lists to organize information.
-- **`assignment_2.html`:** A practical application of HTML concepts to build a simple, complete webpage profile titled "Pochi The Cat". It combines various elements like headings, paragraphs, images, lists, and hyper-links to create a cohesive document.
-- **`4.css`:** The accompanying cascading stylesheet used to add basic styling, colors, layout, and visual presentation to the `assignment_2.html` document.
+## Root Files
 
-## Learning Objectives
-1. Understand semantic HTML elements and how to structure a web document correctly.
-2. Learn how to embed media like images and create functional navigation links.
-3. Grasp the basics of CSS selectors, properties, and values to alter the appearance of HTML elements.
-4. Practice linking external stylesheets to an HTML document for better code organization
+- **nested-lists.html** — Nested unordered lists for fruits, vegetables, cereals, and nuts.
+- **cat-profile.html** — “Pochi The Cat” profile page with image, headings, lists, and links.
+- **cat-profile.css** — Styles for the cat profile page (colors, layout, typography).
 
+## cities/
+
+Multi-page city guide with shared styling.
+
+- **city-list.html** — Index page linking to Hyderabad, Chennai, and Bangalore.
+- **hyderabad.html** — Hyderabad page with image gallery layout.
+- **chennai.html** — Chennai city page with shared styles.
+- **bangalore.html** — Bangalore city page with shared styles.
+- **styles.css** — Common CSS for all city pages (layout, images, text).

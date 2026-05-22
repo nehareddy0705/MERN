@@ -1,15 +1,38 @@
-# Week 5 - Advanced Styling and UI Components
+# Week 5 - CSS Layout, Tailwind & React UI
 
-This directory contains tasks and assignments for Week 5, organized chronologically by day. This week focuses heavily on advanced CSS techniques and modern styling frameworks.
+Advanced styling and component work from Week 5, organized by topic.
 
-## Directory Structure
-- **`day_12/`:** Contains intermediate HTML and CSS assignments. These tasks focus on more complex page structures, layout techniques (like Flexbox or Grid), and detailed styling.
-- **`day_13/`:** Introduces Utility-First CSS frameworks. Features HTML projects built specifically with Tailwind CSS, complete with configuration files (`tailwind.config.js`) and optimized assets.
-- **`day_14/`:** Contains granular, UI-focused assignments that are split into specific, reusable components. Examples include detailed visual implementations like `product_details` cards and `user_details` profiles.
+## css-layout/
 
-## Learning Objectives
-1. Transition from basic vanilla CSS to more advanced layout management techniques.
-2. Understand the utility-first methodology by working hands-on with Tailwind CSS.
-3. Learn how to set up and configure a Tailwind project environment.
-4. Practice building modular and visually appealing UI components that can be integrated into larger applications.
+Vanilla HTML/CSS layout practice.
 
+- **tables.html** — Multi-level HTML table with colspan and row structure.
+- **tables.css** — Table borders, spacing, and header styling.
+- **nav-page.html** — Navbar, hero image section, and content blocks.
+- **nav-page.css** — Flex/grid layout and page styling for the nav demo.
+
+## tailwind/
+
+Tailwind CSS exercises and config.
+
+- **tw-hello.html** — Hello World hero with Tailwind utilities and compiled `output.css`.
+- **tw-nav.html** — Responsive nav and two-column layout (Libertarians-style page).
+- **tw-city.html** — “Best City Guide” landing page with Tailwind components.
+- **input.css** / **output.css** — Tailwind source and built stylesheet.
+- **tailwind.config.js** / **package.json** — Tailwind project setup.
+
+## react-apps/
+
+Vite + React component assignments (`npm install`, `npm run dev` in each folder).
+
+### products/
+
+- **ProductList.jsx** — Renders a list of product cards from sample data.
+- **components/** — `Product.jsx`, `navbar.jsx`, `Footer.jsx` for the product UI.
+- **main.jsx** / **index.html** — App entry and Vite shell.
+
+### users/
+
+- **UserList.jsx** — Renders user profile cards from sample data.
+- **components/user.jsx** — Single user card component.
+- **main.jsx** / **index.html** — App entry and Vite shell.

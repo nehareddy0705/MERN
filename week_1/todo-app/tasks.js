@@ -1,6 +1,6 @@
 //  ii. task.js - Task operations
                     // TODO: Import validator functions
-                    import {validateTitle,validatePriority,validateDueDate} from './validator.js';
+                    import {validateTitle,validatePriority,validateDueDate} from './validate.js';
                     
                     export let tasks = [];
                     

@@ -1,16 +1,25 @@
-# Week 2 - Advanced JavaScript & Introduction to Backend
+# Week 2 - OOP, Copying & Backend Intro
 
-This directory contains intermediate to advanced JavaScript concepts and assignments completed during Week 2. It bridges the gap between basic frontend scripts and initial backend applications.
+Intermediate JavaScript and first Express server from Week 2.
 
-## Overview of Concepts
-- **Object-Oriented Programming (OOP):** Creating classes, managing properties, and writing methods. A practical example includes building a Library Book Management System.
-- **Object Manipulation:** Exploring deep and shallow copies of objects, including the use of `structuredClone` for accurate data duplication.
-- **Asynchronous JavaScript:** Understanding the event loop and asynchronous behavior using timers like `setTimeout` and `setInterval` to simulate real-world delays.
-- **Backend Basics:** Contains an introductory `first_backend` subdirectory which explores basic server-side concepts using Node.js.
+## Assignments
 
-## Learning Objectives
-1. Grasp the principles of OOP in JavaScript and how to model real-world entities.
-2. Understand reference vs. value types when manipulating objects and arrays.
-3. Learn the basics of asynchronous execution to avoid blocking the main thread.
-4. Take the first steps toward building a backend architecture.
+- **library-books.js** — Book class: borrow, return, getInfo, isLongBook; manage a library collection.
+- **shallow-copy.js** — Shallow copy with spread; change nested fields and compare originals.
+- **deep-copy.js** — Deep copy with structuredClone; modify nested order data safely.
+- **spread-array.js** — Copy a fruits array and append with spread without mutating the original.
+- **spread-object.js** — Clone a user object and add a property without changing the original.
+- **rest-sum.js** — Sum any number of arguments using a rest parameter.
+- **otp-countdown.js** — OTP sent message with a 10-second resend countdown (setInterval).
+- **exam-portal.js** — Exam submit flow with delayed status updates (setTimeout).
 
+## backend/
+
+Express REST API (`cd backend`, `npm install`, `node server.js`). Test with `req.http`.
+
+- **server.js** — Main app: JSON middleware, verify middleware, mounts routers on port 3000.
+- **APIs/users.js** — User router: GET/POST/PUT/DELETE on `/users`.
+- **APIs/products.js** — Product router: CRUD and GET by brand on `/product`.
+- **req.http** — Sample HTTP requests for testing endpoints.
+- **package.json** — Express dependency and ES module setup.
+- **README.md** — Quick setup steps for the backend folder.

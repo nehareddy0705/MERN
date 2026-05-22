@@ -2,8 +2,8 @@
 //express internally contains HTTP server
 import exp from 'express'
 const app = exp() 
-import {userApp} from './APIs/usersAPI.js'
-import {productApp} from './APIs/productAPI.js'
+import {userApp} from './APIs/users.js'
+import {productApp} from './APIs/products.js'
 //use body parser middleware- used to extract the body of post and put req
 app.use(exp.json()) 
 

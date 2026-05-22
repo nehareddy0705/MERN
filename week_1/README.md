@@ -1,16 +1,29 @@
 # Week 1 - JavaScript Basics
 
-This directory contains introductory JavaScript code and assignments completed during Week 1.
+Introductory JavaScript from Week 1: syntax, data structures, array methods, async code, and practice assignments.
 
-## Overview of Concepts
-- **Basic syntax and logic:** conditionals, loops, variables (`let`, `const`, `var`), and basic operators. Examples include finding the largest of two numbers.
-- **Data structures:** Introduction to Arrays and Objects.
-- **Array methods:** Using higher-order functions to manipulate arrays, including `filter()`, `map()`, `reduce()`, `find()`, `findIndex()`, and `splice()`.
+## Lesson Files
 
-## Learning Objectives
-By completing these assignments, the goal was to:
-1. Understand how to declare and manipulate variables in JavaScript.
-2. Gain familiarity with common data structures and when to use them.
-3. Learn how to iterate over collections of data effectively using modern ES6 array methods.
-4. Build a foundation for more advanced JavaScript concepts in the upcoming weeks.
+- **max-two.js** — Compare two numbers with if/else.
+- **callbacks.js** — Callbacks, closures, for-of/for-in loops, objects, and array mutations.
+- **array-methods.js** — filter, map, reduce, sort, and toSorted on arrays.
+- **try-catch.js** — try/catch error handling with ReferenceError.
+- **classes.js** — ES6 classes, private fields, optional chaining, nullish coalescing.
+- **spread-rest.js** — Spread/rest, shallow vs deep copy, destructuring.
+- **async.js** — setTimeout, setInterval, and Promises.
+- **node-notes.js** — Notes on Node.js runtime and npm install.
 
+## Assignments
+
+- **emp-splice.js** — Insert, remove, and update employee records using splice, find, findIndex.
+- **temp-analyzer.js** — Temperature data with filter, map, reduce, find, findIndex.
+- **cart.js** — Shopping cart totals and in-stock filtering with array methods.
+- **students.js** — Student pass list, grades, and averages with array methods.
+
+## todo-app/
+
+Modular ES6 todo app (run from folder: `node main.js`).
+
+- **validate.js** — Validates task title, priority, and due date.
+- **tasks.js** — addTask, getAllTasks, completeTask using validators.
+- **main.js** — Demo: add tasks, complete one, print the list.
