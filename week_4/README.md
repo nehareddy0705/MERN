@@ -11,5 +11,5 @@ This directory contains assignments for Week 4, shifting the focus towards front
 1. Understand semantic HTML elements and how to structure a web document correctly.
 2. Learn how to embed media like images and create functional navigation links.
 3. Grasp the basics of CSS selectors, properties, and values to alter the appearance of HTML elements.
-4. Practice linking external stylesheets to an HTML document for better code organization.
+4. Practice linking external stylesheets to an HTML document for better code organization
 
